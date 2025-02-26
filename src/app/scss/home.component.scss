@@ -1,0 +1,50 @@
+.home{
+  width: 100%;
+  height: max-content;
+  background: linear-gradient(to top, #00000005,var(--color-purple));
+  padding: 0 var(--padding-home);
+  padding-top: var(--padding-home);
+  position: relative;
+  #header{
+    position: fixed;
+    width: calc(100% - var(--padding-home) - var(--padding-home));
+    height: var(--height-header);
+    background-color: var(--color-black);
+    border-radius: var(--border-radius-home);
+  }
+  .container{
+    width: 100%;
+    height: 100dvh;
+    background-image: url("/assets/img/background.jpg");
+    background-position: center;
+    background-size: cover;
+    border-radius: var(--border-radius-home);
+    border-bottom-right-radius: unset;
+    border-bottom-left-radius: unset;
+    .content-box{
+      width: 100%;
+      height: 100%;
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+      gap: 3rem;
+      flex-direction: column;
+      background-color: #00000077;
+      border-radius: var(--border-radius-home);
+      border-bottom-right-radius: unset;
+      border-bottom-left-radius: unset;
+      #HomeContent{
+        display: inherit;
+        justify-content: center;
+        align-items: center;
+      }
+      #HomeCard{
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: row;
+      }
+    }
+  }
+}

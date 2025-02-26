@@ -1,0 +1,162 @@
+/* ? Resetting CSS */
+*:where(:not(html, iframe, canvas, img, svg, video, audio):not(svg *, symbol *)) {
+all: unset;
+display: revert;
+}
+
+*,
+*::before,
+*::after {
+box-sizing: border-box;
+}
+
+html {
+-moz-text-size-adjust: none;
+-webkit-text-size-adjust: none;
+text-size-adjust: none;
+font-size: 16px;
+}
+
+a, button {
+cursor: revert;
+}
+
+ol, ul, menu, summary {
+list-style: none;
+}
+
+ol {
+counter-reset: revert;
+}
+
+img {
+max-inline-size: 100%;
+max-block-size: 100%;
+}
+
+table {
+border-collapse: collapse;
+}
+
+input, textarea {
+--webkit-user-select: auto;
+-webkit-user-select: auto;
+-ms-user-select: auto;
+user-select: auto;
+}
+
+textarea {
+white-space: revert;
+}
+
+meter {
+-webkit-appearance: revert;
+appearance: revert;
+}
+
+:where(pre) {
+all: revert;
+box-sizing: border-box;
+}
+
+::placeholder {
+color: unset;
+}
+
+:where([hidden]) {
+display: none;
+}
+
+:where([contenteditable]:not([contenteditable="false"])) {
+-moz-user-modify: read-write;
+-webkit-user-modify: read-write;
+overflow-wrap: break-word;
+line-break: auto;
+--webkit-user-select: auto;
+-webkit-user-select: auto;
+-ms-user-select: auto;
+user-select: auto;
+}
+
+:where([draggable="true"]) {
+-webkit-user-drag: element;
+}
+
+:where(dialog:modal) {
+all: revert;
+box-sizing: border-box;
+}
+
+::-webkit-details-marker {
+display: none;
+}
+/* ? Resetting CSS in fonts */
+// h1 {
+// font-size: clamp(3.2rem, 2.5356rem + 1.3870vw, 4.2rem);
+// }
+// h2 {
+// font-size: clamp(2.8rem, 2.4014rem + 0.8322vw, 3.4rem);
+// }
+// h3 {
+// font-size: clamp(2.4rem, 2.1343rem + 0.5548vw, 2.8rem);
+// }
+// h4 {
+// font-size: clamp(2.2rem, 2.0671rem + 0.2774vw, 2.4rem);
+// }
+// h5 {
+// font-size: clamp(2rem, 1.8671rem + 0.2774vw, 2.2rem);
+// }
+// h6 {
+// font-size: clamp(1.8rem, 1.6671rem + 0.2774vw, 2rem);
+// }
+// p {
+// font-size: clamp(1.6rem, 1.2468rem + 0.2774vw, 1.9rem);
+// }
+:root{
+  // ? Color
+  --color-purple: #996AE9;
+  --color-black: #000000;
+  --color-white: #ffffff;
+  --color-white-lower: #d8d8d8;
+  // ! Padding
+  --padding-home: 5.8px;
+  // ! Height
+  --height-header: 78px;
+  // ? Border radius
+  --border-radius-home: 20px;
+  // ! Font
+  --font-header-title-clamp: clamp(0.67rem, 8dvw , 1.5rem);
+  --font-header-navigation-clamp: clamp(0.74rem, 8dvw , 1.04rem);
+
+}
+body{
+  background-color: var(--color-black);
+  color: var(--color-white);
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 100 900;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/inter/v18/UcC73FwrK3iLTeHuS_nVMrMxCp50SjIa2JL7SUc.woff2) format('woff2');
+  unicode-range: U+0460-052F, U+1C80-1C8A, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;
+  // ! Debug: Scrollbar because of Chrome's bug
+  &::-webkit-scrollbar {
+    width: 0px;
+  }
+  &::-webkit-scrollbar-track {
+    background: transparent;
+  }
+  &::-webkit-scrollbar-thumb {
+    background: transparent;
+  }
+  &::-webkit-scrollbar-thumb:hover {
+    background: transparent;
+  }
+}
+.MainRoot{
+  width: 100dvw;
+  min-height: 100dvh;
+  height: max-content;
+}
+.flex{
+  display: flex;
+}
